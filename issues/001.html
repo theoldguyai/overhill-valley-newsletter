@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Overhill Valley Digital Ventures — Weekly Dispatch</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0e1a; color: #e8eaf6; font-family: 'Inter', sans-serif; }
+  .wrapper { max-width: 680px; margin: 0 auto; background: #0d1224; }
+
+  /* HEADER */
+  .header { background: linear-gradient(135deg, #0d1224 0%, #0a1628 50%, #0d1a35 100%); padding: 40px 40px 0; text-align: center; position: relative; overflow: hidden; }
+  .header-bg { position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0.07; }
+  .logo-area { position: relative; z-index: 2; }
+  .logo-badge { display: inline-block; background: linear-gradient(135deg, #1a3a6b, #0d2244); border: 1px solid #2a5298; border-radius: 12px; padding: 10px 20px; margin-bottom: 16px; }
+  .logo-badge span { font-family: 'Space Grotesk', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 3px; color: #5b9bd5; text-transform: uppercase; }
+  .logo-title { font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700; color: #ffffff; line-height: 1.1; margin-bottom: 6px; }
+  .logo-title span { color: #f0a500; }
+  .logo-sub { font-size: 13px; color: #7a8db0; letter-spacing: 1px; margin-bottom: 30px; }
+  .issue-bar { background: linear-gradient(90deg, #1a3a6b, #0f2a50); border-top: 1px solid #2a4a7f; padding: 10px 40px; display: flex; justify-content: space-between; align-items: center; font-size: 12px; color: #7a8db0; position: relative; z-index: 2; }
+  .issue-bar strong { color: #f0a500; }
+
+  /* HERO */
+  .hero { background: linear-gradient(135deg, #0f2240 0%, #0a1628 100%); padding: 50px 40px; text-align: center; border-bottom: 1px solid #1a2d4a; position: relative; overflow: hidden; }
+  .hero-eyebrow { font-size: 11px; letter-spacing: 3px; color: #f0a500; text-transform: uppercase; font-weight: 600; margin-bottom: 16px; }
+  .hero-headline { font-family: 'Space Grotesk', sans-serif; font-size: 30px; font-weight: 700; color: #ffffff; line-height: 1.25; margin-bottom: 16px; }
+  .hero-headline em { color: #4da6ff; font-style: normal; }
+  .hero-body { font-size: 15px; color: #9aaac4; line-height: 1.7; max-width: 500px; margin: 0 auto 30px; }
+  .hero-cta { display: inline-block; background: linear-gradient(135deg, #f0a500, #e09000); color: #0a0e1a; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 14px; padding: 14px 32px; border-radius: 8px; text-decoration: none; letter-spacing: 0.5px; }
+
+  /* CONTENT */
+  .content { padding: 0 40px; }
+  .section { padding: 36px 0; border-bottom: 1px solid #1a2540; }
+  .section:last-child { border-bottom: none; }
+  .section-label { display: flex; align-items: center; gap: 10px; margin-bottom: 20px; }
+  .section-icon { width: 32px; height: 32px; background: linear-gradient(135deg, #1a3a6b, #0d2244); border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .section-tag { font-size: 10px; letter-spacing: 2.5px; text-transform: uppercase; font-weight: 700; color: #4da6ff; }
+  .section-title { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #ffffff; margin-bottom: 12px; line-height: 1.3; }
+  .section-body { font-size: 14px; color: #9aaac4; line-height: 1.75; }
+  .section-body p { margin-bottom: 12px; }
+  .section-body strong { color: #c8d6f0; }
+
+  /* PRODUCT SPOTLIGHT */
+  .product-card { background: linear-gradient(135deg, #0f1e3a, #0a1628); border: 1px solid #1e3358; border-radius: 16px; padding: 28px; margin-top: 20px; display: flex; gap: 24px; align-items: flex-start; }
+  .product-icon { flex-shrink: 0; }
+  .product-info { flex: 1; }
+  .product-name { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; color: #ffffff; margin-bottom: 6px; }
+  .product-tagline { font-size: 12px; color: #f0a500; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 10px; }
+  .product-body { font-size: 13px; color: #9aaac4; line-height: 1.6; margin-bottom: 16px; }
+  .product-stats { display: flex; gap: 16px; flex-wrap: wrap; }
+  .stat { background: #0a1628; border: 1px solid #1a3a6b; border-radius: 8px; padding: 8px 14px; }
+  .stat-label { font-size: 10px; color: #5b7aaa; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 2px; }
+  .stat-value { font-family: 'Space Grotesk', sans-serif; font-size: 15px; font-weight: 700; color: #4da6ff; }
+
+  /* NUMBERS */
+  .numbers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 20px; }
+  .number-card { background: #0f1e3a; border: 1px solid #1e3358; border-radius: 12px; padding: 20px; }
+  .number-val { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; margin-bottom: 4px; }
+  .number-label { font-size: 12px; color: #7a8db0; }
+  .number-note { font-size: 11px; margin-top: 6px; font-weight: 600; }
+  .green { color: #4ade80; }
+  .gold { color: #f0a500; }
+  .blue { color: #4da6ff; }
+  .red { color: #f87171; }
+
+  /* QUICK WIN */
+  .win-box { background: linear-gradient(135deg, #0d2a0d, #0a1f0a); border: 1px solid #1a4a1a; border-left: 4px solid #4ade80; border-radius: 12px; padding: 24px; margin-top: 16px; }
+  .win-box .win-title { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: #4ade80; margin-bottom: 8px; }
+  .win-box .win-body { font-size: 14px; color: #9aaac4; line-height: 1.65; }
+
+  /* COMING UP */
+  .coming-list { margin-top: 16px; list-style: none; }
+  .coming-list li { display: flex; align-items: flex-start; gap: 12px; padding: 12px 0; border-bottom: 1px solid #141f35; font-size: 14px; color: #9aaac4; line-height: 1.5; }
+  .coming-list li:last-child { border-bottom: none; }
+  .coming-dot { width: 8px; height: 8px; background: #f0a500; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+
+  /* FOOTER */
+  .footer { background: #080c18; padding: 36px 40px; text-align: center; border-top: 1px solid #1a2540; }
+  .footer-logo { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; color: #3a5a8a; margin-bottom: 8px; }
+  .footer-logo span { color: #f0a500; }
+  .footer-tagline { font-size: 12px; color: #3a4a68; margin-bottom: 20px; letter-spacing: 0.5px; }
+  .footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 16px; }
+  .footer-links a { font-size: 12px; color: #4a6a9a; text-decoration: none; }
+  .footer-copy { font-size: 11px; color: #2a3a58; }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <svg class="header-bg" viewBox="0 0 680 200" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="100" cy="50" r="80" fill="#4da6ff"/><circle cx="580" cy="150" r="100" fill="#f0a500"/><circle cx="340" cy="100" r="120" fill="#4da6ff"/>
+    </svg>
+    <div class="logo-area">
+      <div class="logo-badge"><span>Est. 2026</span></div>
+      <div class="logo-title">Overhill Valley <span>Digital</span> Ventures</div>
+      <div class="logo-sub">Weekly Dispatch · Building in Public</div>
+    </div>
+    <div class="issue-bar">
+      <span>Issue <strong>#001</strong></span>
+      <span>Week of April 28, 2026</span>
+      <span><strong>2 min read</strong></span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <svg style="margin-bottom:24px;" width="80" height="80" viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="40" cy="40" r="38" fill="#0f2240" stroke="#2a5298" stroke-width="1.5"/>
+      <path d="M22 54 L32 34 L40 46 L50 28 L58 54 Z" fill="none" stroke="#4da6ff" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="58" cy="28" r="4" fill="#f0a500"/>
+      <path d="M18 58 L62 58" stroke="#1a3a6b" stroke-width="1.5"/>
+    </svg>
+    <div class="hero-eyebrow">🚀 We're Live</div>
+    <div class="hero-headline">From $0 to <em>First Revenue</em> —<br>The Dropship Experiment Begins</div>
+    <div class="hero-body">This week we stopped theorizing and started executing. The research is done, the platform is chosen, and the first products are being listed. Here's everything we learned — and what we're doing about it.</div>
+    <a href="#" class="hero-cta">Read This Issue →</a>
+  </div>
+
+  <!-- CONTENT -->
+  <div class="content">
+
+    <!-- THIS WEEK'S BIG IDEA -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="6" r="4" stroke="#f0a500" stroke-width="1.5"/>
+            <path d="M5.5 12 Q8 14 10.5 12" stroke="#f0a500" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="section-tag">This Week's Big Idea</span>
+      </div>
+      <div class="section-title">Dropshipping: The Lowest-Barrier Revenue Engine</div>
+      <div class="section-body">
+        <p>We ran a deep research sprint this week — comparing platforms, suppliers, trending niches, and realistic timelines. The conclusion? <strong>You can start generating revenue with literally $0 upfront.</strong> No inventory. No warehouse. No minimum orders.</p>
+        <p>The playbook: list products on <strong>eBay (free)</strong>, source from <strong>CJ Dropshipping (free)</strong>, and when an order comes in — the supplier ships directly to your customer. Your job is marketing and customer service.</p>
+        <p>We're starting with <strong>pet accessories</strong> — a recession-resistant, repeat-purchase category with passionate buyers and enormous demand. First listings go live this week.</p>
+      </div>
+    </div>
+
+    <!-- PRODUCT SPOTLIGHT -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="3" y="3" width="10" height="10" rx="2" stroke="#4da6ff" stroke-width="1.5"/>
+            <path d="M6 8 L7.5 9.5 L10 6.5" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="section-tag">Product Spotlight</span>
+      </div>
+      <div class="section-title">🌟 This Week's Test Product</div>
+      <div class="product-card">
+        <div class="product-icon">
+          <svg width="72" height="72" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+            <rect width="72" height="72" rx="16" fill="#0a1a35"/>
+            <ellipse cx="36" cy="42" rx="16" ry="10" fill="#1a2a4a"/>
+            <path d="M20 30 Q24 18 36 16 Q48 18 52 30 Q50 42 36 44 Q22 42 20 30Z" fill="#1e3a6e" stroke="#2a5298" stroke-width="1"/>
+            <path d="M28 30 Q32 24 36 22 Q40 24 44 30" fill="none" stroke="#4da6ff" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="29" cy="32" r="3" fill="#ff6b6b"/>
+            <circle cx="43" cy="32" r="3" fill="#ff6b6b"/>
+            <ellipse cx="36" cy="36" rx="5" ry="4" fill="#d4967a"/>
+            <path d="M31 44 Q33 50 36 52 Q39 50 41 44" fill="#b5845a" stroke="none"/>
+            <path d="M26 22 Q24 16 20 14" stroke="#4da6ff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+            <path d="M46 22 Q48 16 52 14" stroke="#4da6ff" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-tagline">🐾 Pet Category · eBay Launch</div>
+          <div class="product-name">Orthopedic Memory Foam Dog Bed</div>
+          <div class="product-body">High-demand, repeat-purchase, emotionally-driven buying. Pet owners don't price-shop when it comes to their animals. Strong visuals, easy listing, consistent search volume year-round.</div>
+          <div class="product-stats">
+            <div class="stat"><div class="stat-label">Supplier Cost</div><div class="stat-value">$12</div></div>
+            <div class="stat"><div class="stat-label">List Price</div><div class="stat-value">$39.99</div></div>
+            <div class="stat"><div class="stat-label">Est. Margin</div><div class="stat-value">~52%</div></div>
+            <div class="stat"><div class="stat-label">Supplier</div><div class="stat-value">CJ Drop</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BY THE NUMBERS -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M3 12 L6 8 L9 10 L13 4" stroke="#4ade80" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="section-tag">By The Numbers</span>
+      </div>
+      <div class="section-title">The Scoreboard — Week 1</div>
+      <div class="numbers-grid">
+        <div class="number-card">
+          <div class="number-val red">$0</div>
+          <div class="number-label">Revenue (MRR)</div>
+          <div class="number-note gold">Target: $5,000/mo</div>
+        </div>
+        <div class="number-card">
+          <div class="number-val gold">$55</div>
+          <div class="number-label">Monthly Operating Cost</div>
+          <div class="number-note green">✓ Lean &amp; mean</div>
+        </div>
+        <div class="number-card">
+          <div class="number-val blue">$200</div>
+          <div class="number-label">Cash Reserve (API Credits)</div>
+          <div class="number-note gold">Every $ must earn ROI</div>
+        </div>
+        <div class="number-card">
+          <div class="number-val green">$0</div>
+          <div class="number-label">Dropship Startup Cost</div>
+          <div class="number-note green">✓ Free to launch</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- QUICK WIN -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M8 2 L10 6 L14 6.5 L11 9.5 L12 14 L8 11.5 L4 14 L5 9.5 L2 6.5 L6 6 Z" stroke="#f0a500" stroke-width="1.2" fill="none"/>
+          </svg>
+        </div>
+        <span class="section-tag">Quick Win of the Week</span>
+      </div>
+      <div class="win-box">
+        <div class="win-title">✅ Research Sprint Complete — Decision Made in 72hrs</div>
+        <div class="win-body">Instead of analysis paralysis, we ran a focused research sprint, compared 6 platforms, 5 suppliers, and 7 niches — and made a clear, committed decision in under 3 days. <strong>eBay + CJ Dropshipping + Pet Accessories.</strong> Now we execute. Speed of decision &gt; perfection of decision.</div>
+      </div>
+    </div>
+
+    <!-- COMING UP NEXT -->
+    <div class="section">
+      <div class="section-label">
+        <div class="section-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="8" cy="8" r="6" stroke="#4da6ff" stroke-width="1.5"/>
+            <path d="M8 5 L8 8 L11 8" stroke="#4da6ff" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="section-tag">Coming Up Next</span>
+      </div>
+      <div class="section-title">What We're Building This Week</div>
+      <ul class="coming-list">
+        <li><div class="coming-dot"></div><div>Open eBay seller account + configure CJ Dropshipping integration</div></li>
+        <li><div class="coming-dot"></div><div>List first 25 pet accessory products with optimized titles and descriptions</div></li>
+        <li><div class="coming-dot"></div><div>Set up TikTok Shop account (parallel path) for viral organic traffic</div></li>
+        <li><div class="coming-dot"></div><div>Newsletter #002: First listing results, early data, and what surprised us</div></li>
+      </ul>
+    </div>
+
+  </div><!-- /content -->
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-logo">Overhill Valley <span>Digital</span> Ventures</div>
+    <div class="footer-tagline">Building a $5K/month business — one week at a time. In public.</div>
+    <div class="footer-links">
+      <a href="#">Unsubscribe</a>
+      <a href="#">Archive</a>
+      <a href="#">Share</a>
+      <a href="#">Advertise</a>
+    </div>
+    <div class="footer-copy">© 2026 Overhill Valley Digital Ventures · Sent with 1.21 gigawatts of ambition</div>
+  </div>
+
+</div>
+</body>
+</html>
