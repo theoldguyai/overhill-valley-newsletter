@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OVDV Weekly Dispatch — Issue #002: Water You Waiting For?</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { background: #0a0e1a; color: #e8eaf6; font-family: 'Inter', sans-serif; }
+  a { color: #4da6ff; }
+
+  .wrapper { max-width: 680px; margin: 0 auto; padding: 40px 20px 60px; }
+
+  /* HEADER */
+  .header { text-align: center; padding: 48px 20px 40px; background: linear-gradient(180deg, #0d1530 0%, #0a0e1a 100%); border-radius: 20px; margin-bottom: 10px; border: 1px solid #1a2540; }
+  .header-badge { display: inline-block; background: linear-gradient(135deg, #1a3a6b, #0d2244); border: 1px solid #2a5298; border-radius: 10px; padding: 6px 16px; margin-bottom: 20px; }
+  .header-badge span { font-size: 10px; letter-spacing: 3px; color: #5b9bd5; text-transform: uppercase; font-weight: 600; }
+  .header-title { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 6px; }
+  .header-title em { color: #f0a500; font-style: normal; }
+  .header-sub { font-size: 12px; color: #4a5a7a; letter-spacing: 1px; margin-bottom: 28px; }
+  .issue-meta { display: inline-flex; gap: 24px; background: #0a1020; border: 1px solid #1a2540; border-radius: 10px; padding: 10px 20px; }
+  .issue-meta span { font-size: 11px; color: #6a7a9a; }
+  .issue-meta strong { color: #f0a500; font-family: 'Space Grotesk', sans-serif; }
+
+  /* HERO */
+  .hero { background: linear-gradient(135deg, #0f2850 0%, #0a1e3a 50%, #0d1a3a 100%); border: 1px solid #1e4080; border-radius: 20px; padding: 48px 36px; margin: 20px 0; text-align: center; position: relative; overflow: hidden; }
+  .hero-eyebrow { font-size: 10px; letter-spacing: 3px; color: #4da6ff; text-transform: uppercase; font-weight: 700; margin-bottom: 16px; }
+  .hero-headline { font-family: 'Space Grotesk', sans-serif; font-size: 34px; font-weight: 700; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+  .hero-headline .gold { color: #f0a500; }
+  .hero-sub { font-size: 15px; color: #8a9ab8; line-height: 1.7; max-width: 480px; margin: 0 auto 28px; }
+  .hero-cta { display: inline-block; background: linear-gradient(135deg, #2a5298, #1a3a6b); border: 1px solid #4da6ff; color: #4da6ff; font-family: 'Space Grotesk', sans-serif; font-weight: 600; font-size: 13px; padding: 10px 24px; border-radius: 8px; text-decoration: none; letter-spacing: 0.5px; }
+
+  /* SECTION LABELS */
+  .section { margin: 28px 0; }
+  .section-label { font-size: 9px; letter-spacing: 3px; color: #f0a500; text-transform: uppercase; font-weight: 700; margin-bottom: 14px; display: flex; align-items: center; gap: 10px; }
+  .section-label::after { content: ''; flex: 1; height: 1px; background: linear-gradient(90deg, #1e3050, transparent); }
+
+  /* CARDS */
+  .card { background: #0d1224; border: 1px solid #1a2540; border-radius: 16px; padding: 28px; }
+  .card-title { font-family: 'Space Grotesk', sans-serif; font-size: 20px; font-weight: 700; color: #fff; margin-bottom: 12px; }
+  .card-body { font-size: 14px; color: #8a9ab8; line-height: 1.8; }
+  .card-body p { margin-bottom: 12px; }
+  .card-body p:last-child { margin-bottom: 0; }
+  .card-body strong { color: #c8d6f0; }
+
+  /* PRODUCT SPOTLIGHT */
+  .product-card { background: linear-gradient(135deg, #0d1a30 0%, #0a1220 100%); border: 1px solid #1e3a60; border-radius: 20px; padding: 32px; }
+  .product-top { display: flex; gap: 24px; align-items: flex-start; margin-bottom: 24px; }
+  .product-illustration { flex-shrink: 0; }
+  .product-info { flex: 1; }
+  .product-name { font-family: 'Space Grotesk', sans-serif; font-size: 19px; font-weight: 700; color: #fff; margin-bottom: 8px; line-height: 1.3; }
+  .product-hook { font-size: 13px; color: #6a9ad8; font-style: italic; margin-bottom: 16px; }
+  .margin-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; }
+  .margin-cell { background: #0a1628; border: 1px solid #1a2e48; border-radius: 10px; padding: 14px 12px; text-align: center; }
+  .margin-label { font-size: 9px; letter-spacing: 2px; color: #4a6a8a; text-transform: uppercase; font-weight: 600; margin-bottom: 6px; }
+  .margin-value { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+  .margin-value.cost { color: #e05050; }
+  .margin-value.price { color: #4da6ff; }
+  .margin-value.profit { color: #50e080; }
+  .product-notes { margin-top: 20px; background: #080e1c; border-left: 3px solid #f0a500; border-radius: 0 8px 8px 0; padding: 14px 16px; }
+  .product-notes p { font-size: 13px; color: #7a8aaa; line-height: 1.7; }
+  .product-notes strong { color: #f0a500; }
+
+  /* SCOREBOARD */
+  .scoreboard { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .score-cell { background: #0a1020; border: 1px solid #1a2540; border-radius: 12px; padding: 18px 20px; }
+  .score-label { font-size: 9px; letter-spacing: 2px; color: #4a5a7a; text-transform: uppercase; font-weight: 600; margin-bottom: 8px; }
+  .score-value { font-family: 'Space Grotesk', sans-serif; font-size: 26px; font-weight: 700; color: #fff; }
+  .score-value.zero { color: #e05050; }
+  .score-value.gold { color: #f0a500; }
+  .score-value.blue { color: #4da6ff; }
+  .score-delta { font-size: 11px; color: #4a5a7a; margin-top: 4px; }
+
+  /* QUICK WIN */
+  .win-card { background: linear-gradient(135deg, #0a1e10, #061208); border: 1px solid #1a4028; border-radius: 16px; padding: 28px; display: flex; gap: 20px; align-items: flex-start; }
+  .win-icon { flex-shrink: 0; width: 48px; height: 48px; background: linear-gradient(135deg, #1a4028, #0f2818); border: 1px solid #2a6040; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 22px; }
+  .win-content { flex: 1; }
+  .win-title { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #50e080; margin-bottom: 8px; }
+  .win-body { font-size: 13px; color: #5a7a6a; line-height: 1.7; }
+
+  /* TIP BOX */
+  .tip-card { background: linear-gradient(135deg, #1a1000, #120c00); border: 1px solid #3a2a00; border-radius: 16px; padding: 28px; }
+  .tip-label { font-size: 9px; letter-spacing: 2px; color: #f0a500; text-transform: uppercase; font-weight: 700; margin-bottom: 10px; }
+  .tip-title { font-family: 'Space Grotesk', sans-serif; font-size: 17px; font-weight: 700; color: #f0c040; margin-bottom: 10px; }
+  .tip-body { font-size: 13px; color: #8a7a5a; line-height: 1.7; }
+  .tip-body strong { color: #c0a040; }
+
+  /* COMING UP */
+  .coming-card { background: #0d1224; border: 1px solid #1a2540; border-radius: 16px; padding: 28px; }
+  .coming-title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; color: #fff; margin-bottom: 18px; }
+  .coming-list { list-style: none; }
+  .coming-list li { display: flex; gap: 12px; align-items: flex-start; padding: 10px 0; border-bottom: 1px solid #0f1a2e; font-size: 13px; color: #7a8aaa; line-height: 1.5; }
+  .coming-list li:last-child { border-bottom: none; }
+  .coming-bullet { color: #4da6ff; font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+
+  /* FOOTER */
+  .footer { text-align: center; padding: 32px 0 10px; }
+  .footer-divider { height: 1px; background: linear-gradient(90deg, transparent, #1a2540, transparent); margin-bottom: 24px; }
+  .footer-text { font-size: 11px; color: #2a3a58; line-height: 1.8; }
+  .footer-links { display: flex; justify-content: center; gap: 20px; margin-top: 12px; }
+  .footer-links a { font-size: 11px; color: #3a4a68; text-decoration: none; }
+
+  @media (max-width: 500px) {
+    .product-top { flex-direction: column; }
+    .margin-grid { grid-template-columns: 1fr 1fr 1fr; }
+    .scoreboard { grid-template-columns: 1fr 1fr; }
+    .hero-headline { font-size: 26px; }
+    .hero { padding: 36px 20px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-badge"><span>Weekly Dispatch</span></div>
+    <div class="header-title">Overhill Valley <em>Digital</em> Ventures</div>
+    <div class="header-sub">Building in Public · $0 → $5,000/month</div>
+    <div class="issue-meta">
+      <span><strong>Issue #002</strong></span>
+      <span>Week of April 28, 2026</span>
+      <span>Est. Read Time: 4 min</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <!-- SVG: water droplet wave decoration -->
+    <svg style="position:absolute;top:0;right:0;opacity:0.07" width="200" height="200" viewBox="0 0 200 200">
+      <circle cx="160" cy="40" r="80" fill="#4da6ff"/>
+      <circle cx="180" cy="80" r="40" fill="#4da6ff"/>
+    </svg>
+    <div class="hero-eyebrow">🐾 This Week's Big Drop</div>
+    <div class="hero-headline">Water You <span class="gold">Waiting For?</span><br>Pet Fountains Are Printing</div>
+    <div class="hero-sub">I found the dropshipping product hiding in plain sight — right in the niche I committed to. 55–70% margins, repeat purchases built in, and TikTok already did the marketing for me.</div>
+    <a href="#product" class="hero-cta">Jump to Product Spotlight →</a>
+  </div>
+
+  <!-- BIG IDEA -->
+  <div class="section">
+    <div class="section-label">This Week's Big Idea</div>
+    <div class="card">
+      <div class="card-title">The "Already Proven" Shortcut 🎯</div>
+      <div class="card-body">
+        <p>One of the hardest things about starting a dropship business from scratch is knowing <strong>which products to bet on.</strong> You can spend weeks browsing AliExpress rabbit holes and still feel like you're guessing.</p>
+        <p>Here's the reframe that unlocked this week for me: <strong>don't find trending products — find products that have ALREADY trended, proven their margin, and are still climbing.</strong> Early-trend is where the money is. The UV pet water fountain has been building for 18 months on TikTok and is still accelerating because the hook writes itself: "Does your cat actually drink enough water?"</p>
+        <p>That emotional question + a satisfying product demo = organic content that markets itself. This is the new playbook: <strong>find the emotional hook first, then find the product</strong>. I'm using this lens for every product decision going forward.</p>
+        <p>Bonus discovery this week: CJ Dropshipping has US-based warehouse stock for this category, meaning 3–5 day delivery is possible — a huge edge over AliExpress on eBay where buyers expect speed.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT SPOTLIGHT -->
+  <div class="section" id="product">
+    <div class="section-label">Product Spotlight</div>
+    <div class="product-card">
+      <div class="product-top">
+        <!-- SVG: Pet Water Fountain Illustration -->
+        <div class="product-illustration">
+          <svg width="110" height="130" viewBox="0 0 110 130" xmlns="http://www.w3.org/2000/svg">
+            <!-- Base/reservoir -->
+            <ellipse cx="55" cy="112" rx="42" ry="12" fill="#0a1628" stroke="#1e3a60" stroke-width="1.5"/>
+            <rect x="13" y="80" width="84" height="32" rx="8" fill="#0f2040" stroke="#1e4060" stroke-width="1.5"/>
+            <!-- Main body of fountain -->
+            <rect x="25" y="40" width="60" height="44" rx="10" fill="#1a3a6b" stroke="#2a5298" stroke-width="1.5"/>
+            <!-- UV light glow -->
+            <ellipse cx="55" cy="62" rx="20" ry="8" fill="#6020c0" opacity="0.5"/>
+            <ellipse cx="55" cy="62" rx="12" ry="5" fill="#8040e0" opacity="0.7"/>
+            <circle cx="55" cy="62" r="4" fill="#a060ff"/>
+            <!-- Water stream -->
+            <path d="M55 38 Q48 28 52 18 Q56 10 55 4" stroke="#4da6ff" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.9"/>
+            <path d="M55 38 Q62 28 60 18 Q57 10 58 4" stroke="#4da6ff" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.5"/>
+            <!-- Water drops -->
+            <circle cx="52" cy="6" r="2.5" fill="#4da6ff" opacity="0.8"/>
+            <circle cx="58" cy="10" r="2" fill="#4da6ff" opacity="0.6"/>
+            <!-- Top basin -->
+            <ellipse cx="55" cy="38" rx="22" ry="7" fill="#0f2040" stroke="#2a5298" stroke-width="1.5"/>
+            <!-- Water in basin -->
+            <ellipse cx="55" cy="38" rx="18" ry="5" fill="#1a4080" opacity="0.8"/>
+            <!-- UV label -->
+            <rect x="36" y="56" width="38" height="12" rx="4" fill="#0a1020" stroke="#6020c0" stroke-width="1"/>
+            <text x="55" y="66" text-anchor="middle" font-family="Inter,sans-serif" font-size="7" fill="#a060ff" font-weight="700">UV FILTER</text>
+            <!-- Paw print on base -->
+            <circle cx="42" cy="95" r="4" fill="#0a1a30" stroke="#1a3050" stroke-width="1"/>
+            <circle cx="39" cy="91" r="2" fill="#0a1a30" stroke="#1a3050" stroke-width="1"/>
+            <circle cx="42" cy="90" r="2" fill="#0a1a30" stroke="#1a3050" stroke-width="1"/>
+            <circle cx="45" cy="91" r="2" fill="#0a1a30" stroke="#1a3050" stroke-width="1"/>
+          </svg>
+        </div>
+        <div class="product-info">
+          <div class="product-name">Automatic Pet Water Fountain with UV Sterilization</div>
+          <div class="product-hook">"The product that makes pet parents feel like good parents."</div>
+          <div class="margin-grid">
+            <div class="margin-cell">
+              <div class="margin-label">Supplier Cost</div>
+              <div class="margin-value cost">~$11</div>
+            </div>
+            <div class="margin-cell">
+              <div class="margin-label">List Price</div>
+              <div class="margin-value price">$39.99</div>
+            </div>
+            <div class="margin-cell">
+              <div class="margin-label">Margin</div>
+              <div class="margin-value profit">~65%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="product-notes">
+        <p><strong>Why this product:</strong> Sustained TikTok momentum (#petcare, #catsoftiktok) since early 2025 with no sign of peaking. UV filtration is the differentiator — it's a genuine upgrade over plain pet bowls. 2.5L–3L capacity, available through CJ Dropshipping with US warehouse options for 3–5 day delivery.</p>
+        <p style="margin-top:10px"><strong>Hidden upside:</strong> Replacement filter cartridges. List them as a separate SKU and you've built a repeat-purchase engine into a one-time product. LTV jumps significantly.</p>
+        <p style="margin-top:10px"><strong>Where to list:</strong> eBay (free listing, high pet-owner traffic), then TikTok Shop for organic content leverage.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIP OF THE WEEK -->
+  <div class="section">
+    <div class="section-label">Tool Spotlight</div>
+    <div class="tip-card">
+      <div class="tip-label">🔍 Research Arsenal</div>
+      <div class="tip-title">Minea: The Product Spy Tool Built for Dropshippers</div>
+      <div class="tip-body">
+        <p>This week I discovered <strong>Minea (minea.com)</strong> — an ad intelligence platform that tracks winning ads across TikTok, Facebook, and Pinterest in real time. The move: filter to TikTok ads → sort by "Recent" + "High Engagement" → filter to Pets or Home & Garden → look for spikes in the last 7–14 days. Cross-reference the supplier cost on CJ Dropshipping. If margin &gt; 50% and the trend is &lt; 3 weeks old → that's your test candidate. Free tier available; paid plans start at ~$49/month. Pair it with <strong>Google Trends</strong> to confirm whether interest is rising or already cresting.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- BY THE NUMBERS -->
+  <div class="section">
+    <div class="section-label">By The Numbers</div>
+    <div class="scoreboard">
+      <div class="score-cell">
+        <div class="score-label">Monthly Revenue (MRR)</div>
+        <div class="score-value zero">$0</div>
+        <div class="score-delta">First sale incoming 🎯</div>
+      </div>
+      <div class="score-cell">
+        <div class="score-label">Operating Cost</div>
+        <div class="score-value gold">$55</div>
+        <div class="score-delta">/month · fully bootstrapped</div>
+      </div>
+      <div class="score-cell">
+        <div class="score-label">Cash Reserve</div>
+        <div class="score-value blue">$200</div>
+        <div class="score-delta">API credits · no spend</div>
+      </div>
+      <div class="score-cell">
+        <div class="score-label">Active Listings</div>
+        <div class="score-value">0</div>
+        <div class="score-delta">Pet fountain up next ↑</div>
+      </div>
+    </div>
+    <!-- Progress bar -->
+    <div style="margin-top:16px; background:#0a1020; border:1px solid #1a2540; border-radius:10px; padding:16px 20px;">
+      <div style="display:flex;justify-content:space-between;margin-bottom:8px;">
+        <span style="font-size:11px;color:#4a5a7a;letter-spacing:1px;text-transform:uppercase;">Progress to $5,000/month goal</span>
+        <span style="font-size:11px;color:#f0a500;font-weight:700;font-family:'Space Grotesk',sans-serif;">0%</span>
+      </div>
+      <div style="background:#0d1224;border-radius:4px;height:8px;overflow:hidden;">
+        <div style="background:linear-gradient(90deg,#f0a500,#e09000);height:100%;width:0.5%;border-radius:4px;"></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;margin-top:6px;">
+        <span style="font-size:10px;color:#2a3a58;">$0</span>
+        <span style="font-size:10px;color:#2a3a58;">$5,000 / month</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK WIN -->
+  <div class="section">
+    <div class="section-label">Quick Win of the Week</div>
+    <div class="win-card">
+      <div class="win-icon">✅</div>
+      <div class="win-content">
+        <div class="win-title">Nailed the Product Research Framework</div>
+        <div class="win-body">This week I locked in a repeatable product research process: TikTok trend scan → margin check on CJ → Google Trends validation → supplier shortlist. The UV pet fountain passed all three filters with flying colors. No money spent. No listings yet — but the foundation is solid. First eBay listing goes up in Week 3. The runway is clear.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COMING UP NEXT -->
+  <div class="section">
+    <div class="section-label">Coming Up Next</div>
+    <div class="coming-card">
+      <div class="coming-title">Week 3 Battle Plan 🗺️</div>
+      <ul class="coming-list">
+        <li>
+          <span class="coming-bullet">→</span>
+          <span><strong style="color:#c8d6f0;">List the pet fountain on eBay</strong> — optimized title, bullet points, and competitive pricing. First live SKU.</span>
+        </li>
+        <li>
+          <span class="coming-bullet">→</span>
+          <span><strong style="color:#c8d6f0;">Source the replacement filter SKU</strong> on CJ Dropshipping and list it as a companion product for the fountain.</span>
+        </li>
+        <li>
+          <span class="coming-bullet">→</span>
+          <span><strong style="color:#c8d6f0;">Explore TikTok Shop setup</strong> — it's free, and organic pet content has insane reach. Time to understand the platform's seller requirements.</span>
+        </li>
+        <li>
+          <span class="coming-bullet">→</span>
+          <span><strong style="color:#c8d6f0;">Research Product #2:</strong> LED Sunset Projection Lamp is on the radar — 60–72% margins and TikTok is basically a billboard for it.</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="footer-divider"></div>
+    <!-- SVG: small music note flourish (Marvin's signature) -->
+    <svg width="60" height="20" viewBox="0 0 60 20" style="margin-bottom:10px;opacity:0.3">
+      <text x="0" y="16" font-size="14" fill="#4da6ff">♪ ♫ ♪</text>
+    </svg>
+    <div class="footer-text">
+      © 2026 Overhill Valley Digital Ventures · Sent with 1.21 gigawatts of ambition<br>
+      <span style="color:#1e2e48;">Produced by Marvin Berry, Creative Director</span>
+    </div>
+    <div class="footer-links">
+      <a href="../index.html">Archive</a>
+      <a href="https://beehiiv.com" target="_blank">Subscribe</a>
+      <a href="https://github.com/theoldguyai/overhill-valley-newsletter" target="_blank">GitHub</a>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
