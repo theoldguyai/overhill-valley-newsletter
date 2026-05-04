@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVDV Weekly Dispatch — Issue #003: Brush Up Your Revenue</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #050810;
+      color: #e8eaf0;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+      padding: 24px 16px;
+    }
+    .wrapper {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: linear-gradient(135deg, #0a0e1a 0%, #0d1428 60%, #0a1535 100%);
+      border: 1px solid #1e2d4a;
+      border-radius: 16px 16px 0 0;
+      padding: 40px 40px 32px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -60px; left: -60px;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(77,166,255,0.12) 0%, transparent 70%);
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: -40px; right: -40px;
+      width: 180px; height: 180px;
+      background: radial-gradient(circle, rgba(240,165,0,0.10) 0%, transparent 70%);
+    }
+    .header-brand {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #4da6ff;
+      margin-bottom: 12px;
+      position: relative;
+    }
+    .header-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 28px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 10px;
+      position: relative;
+    }
+    .header-title span { color: #f0a500; }
+    .header-meta {
+      font-size: 13px;
+      color: #6b7a9a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+      position: relative;
+    }
+    .header-meta .badge {
+      background: rgba(77,166,255,0.15);
+      border: 1px solid rgba(77,166,255,0.3);
+      color: #4da6ff;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    /* ── BODY CARD ── */
+    .body-card {
+      background: #0a0e1a;
+      border: 1px solid #1e2d4a;
+      border-top: none;
+      padding: 0 40px;
+    }
+    @media (max-width: 600px) {
+      .header { padding: 28px 20px 24px; }
+      .body-card { padding: 0 20px; }
+      .header-title { font-size: 22px; }
+    }
+
+    /* ── SECTIONS ── */
+    .section {
+      padding: 36px 0;
+      border-bottom: 1px solid #141b2d;
+    }
+    .section:last-child { border-bottom: none; }
+    .section-label {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #f0a500;
+      margin-bottom: 10px;
+    }
+    .section-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.3;
+      margin-bottom: 14px;
+    }
+    .section-body {
+      color: #c0c8dc;
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .section-body p + p { margin-top: 12px; }
+    .section-body strong { color: #ffffff; }
+    .section-body a { color: #4da6ff; text-decoration: none; }
+
+    /* ── HERO ── */
+    .hero-section {
+      padding: 40px 0 36px;
+      border-bottom: 1px solid #141b2d;
+    }
+    .hero-overline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #4da6ff;
+      margin-bottom: 12px;
+    }
+    .hero-headline {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.2;
+      margin-bottom: 16px;
+    }
+    .hero-headline em { color: #f0a500; font-style: normal; }
+    .hero-sub {
+      color: #8892aa;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+    .hero-sub strong { color: #c0c8dc; }
+
+    /* ── PRODUCT CARD ── */
+    .product-card {
+      background: #0d1428;
+      border: 1px solid #1e2d4a;
+      border-radius: 12px;
+      padding: 24px;
+      margin-top: 18px;
+      display: flex;
+      gap: 24px;
+      align-items: flex-start;
+    }
+    @media (max-width: 520px) {
+      .product-card { flex-direction: column; }
+    }
+    .product-icon { flex-shrink: 0; }
+    .product-info { flex: 1; }
+    .product-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .product-desc {
+      font-size: 14px;
+      color: #8892aa;
+      line-height: 1.6;
+      margin-bottom: 16px;
+    }
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+    @media (max-width: 480px) {
+      .price-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    .price-cell {
+      background: rgba(77,166,255,0.07);
+      border: 1px solid rgba(77,166,255,0.15);
+      border-radius: 8px;
+      padding: 10px 12px;
+      text-align: center;
+    }
+    .price-cell .label {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6b7a9a;
+      margin-bottom: 4px;
+    }
+    .price-cell .value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      color: #4da6ff;
+    }
+    .price-cell.highlight .value { color: #f0a500; }
+    .price-cell.profit .value { color: #50fa7b; }
+    .tag {
+      display: inline-block;
+      background: rgba(240,165,0,0.12);
+      border: 1px solid rgba(240,165,0,0.25);
+      color: #f0a500;
+      font-size: 11px;
+      font-weight: 600;
+      padding: 2px 8px;
+      border-radius: 4px;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+    .tag.blue {
+      background: rgba(77,166,255,0.10);
+      border-color: rgba(77,166,255,0.25);
+      color: #4da6ff;
+    }
+    .tag.green {
+      background: rgba(80,250,123,0.10);
+      border-color: rgba(80,250,123,0.25);
+      color: #50fa7b;
+    }
+
+    /* ── SCOREBOARD ── */
+    .scoreboard {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+    }
+    @media (max-width: 480px) {
+      .scoreboard { grid-template-columns: 1fr; }
+    }
+    .score-cell {
+      background: #0d1428;
+      border: 1px solid #1e2d4a;
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .score-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #6b7a9a;
+      margin-bottom: 6px;
+    }
+    .score-value {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+    .score-value.green { color: #50fa7b; }
+    .score-value.gold { color: #f0a500; }
+    .score-value.blue { color: #4da6ff; }
+    .score-note {
+      font-size: 11px;
+      color: #4b566e;
+      margin-top: 4px;
+    }
+
+    /* ── QUICK WIN ── */
+    .win-box {
+      background: linear-gradient(135deg, rgba(80,250,123,0.06) 0%, rgba(80,250,123,0.02) 100%);
+      border: 1px solid rgba(80,250,123,0.2);
+      border-left: 3px solid #50fa7b;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin-top: 16px;
+    }
+    .win-box .win-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 8px;
+    }
+    .win-box p {
+      font-size: 14px;
+      color: #8892aa;
+      line-height: 1.65;
+    }
+
+    /* ── COMING UP ── */
+    .coming-list {
+      list-style: none;
+      margin-top: 16px;
+    }
+    .coming-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #101520;
+      font-size: 14px;
+      color: #c0c8dc;
+    }
+    .coming-list li:last-child { border-bottom: none; }
+    .coming-list li .bullet {
+      width: 22px;
+      height: 22px;
+      background: rgba(240,165,0,0.15);
+      border: 1px solid rgba(240,165,0,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 10px;
+      font-weight: 700;
+      color: #f0a500;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    /* ── TIP BOX ── */
+    .tip-box {
+      background: rgba(240,165,0,0.06);
+      border: 1px solid rgba(240,165,0,0.2);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-top: 20px;
+    }
+    .tip-box .tip-head {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #f0a500;
+      margin-bottom: 8px;
+    }
+    .tip-box p {
+      font-size: 14px;
+      color: #8892aa;
+      line-height: 1.65;
+    }
+    .tip-box code {
+      background: rgba(255,255,255,0.07);
+      border-radius: 4px;
+      padding: 2px 6px;
+      font-size: 13px;
+      color: #e0e8ff;
+      font-family: 'Courier New', monospace;
+    }
+
+    /* ── STRATEGY STEPS ── */
+    .step-list {
+      margin-top: 16px;
+      counter-reset: steps;
+    }
+    .step {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid #0d1428;
+    }
+    .step:last-child { border-bottom: none; }
+    .step-num {
+      width: 30px;
+      height: 30px;
+      background: linear-gradient(135deg, rgba(77,166,255,0.2), rgba(77,166,255,0.08));
+      border: 1px solid rgba(77,166,255,0.3);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      color: #4da6ff;
+      flex-shrink: 0;
+    }
+    .step-content { flex: 1; }
+    .step-title {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+    .step-desc {
+      font-size: 13px;
+      color: #6b7a9a;
+      line-height: 1.6;
+    }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: #060911;
+      border: 1px solid #1e2d4a;
+      border-top: none;
+      border-radius: 0 0 16px 16px;
+      padding: 30px 40px;
+      text-align: center;
+    }
+    .footer p {
+      font-size: 12px;
+      color: #3d4a62;
+      line-height: 1.6;
+    }
+    .footer a { color: #4da6ff; text-decoration: none; }
+    .footer-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, #1e2d4a, transparent);
+      margin: 14px auto;
+    }
+    .footer-logo {
+      font-family: 'Space Grotesk', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: #2a3650;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ═══ HEADER ═══ -->
+  <div class="header">
+    <div class="header-brand">Overhill Valley Digital Ventures</div>
+    <div class="header-title">Weekly <span>Dispatch</span></div>
+    <!-- SVG: waveform signal mark -->
+    <svg style="display:block;margin:18px auto 0;position:relative;" width="80" height="28" viewBox="0 0 80 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 14 Q10 4 16 14 Q22 24 28 14 Q34 4 40 14 Q46 24 52 14 Q58 4 64 14 Q70 24 76 14" stroke="#4da6ff" stroke-width="2.5" stroke-linecap="round" fill="none" opacity="0.7"/>
+      <circle cx="40" cy="14" r="3.5" fill="#f0a500"/>
+    </svg>
+    <div class="header-meta" style="position:relative;">
+      <span class="badge">Issue #003</span>
+      <span>Week of May 4, 2026</span>
+      <span>🐾 Pet Niche: Season Peak</span>
+    </div>
+  </div>
+
+  <!-- ═══ BODY ═══ -->
+  <div class="body-card">
+
+    <!-- ── HERO ── -->
+    <div class="hero-section">
+      <div class="hero-overline">This Week's Big Theme</div>
+      <div class="hero-headline">Brush Up Your Revenue:<br><em>Spring Is Shedding Money</em></div>
+      <p class="hero-sub">
+        Week three of the OVDV experiment. The engine is warming up, the niche is locked in, and right now — right this very week in early May — we're sitting at the peak of <strong>spring shedding season.</strong> Every dog and cat owner in the Northern Hemisphere is fighting the fur wars. We sell them the weapon. This issue: why the self-cleaning pet brush is Q2's most perfect dropship product, how to protect cash flow before you scale, and what's next on the runway to $5K/month.
+      </p>
+    </div>
+
+    <!-- ── BIG IDEA ── -->
+    <div class="section">
+      <div class="section-label">This Week's Big Idea</div>
+      <div class="section-title">Spring Shedding Season Is a Dropshipper's Best Friend</div>
+      <div class="section-body">
+        <p>
+          Most dropshippers spend months hunting for the "perfect evergreen product." Here's the contrarian move: <strong>ride seasonal spikes hard.</strong> Spring shedding season (April–June) creates a repeatable, predictable demand surge for pet grooming products every single year. You're not guessing — you're surfing a tide that shows up on schedule.
+        </p>
+        <p>
+          The data backs this up: TikTok's <strong>#PetGrooming</strong> and <strong>#SatisfyingPets</strong> tags are generating <strong>10M+ weekly views</strong> right now. Amazon's Pet Supplies "Movers &amp; Shakers" list is dominated by brushes and de-shedding tools. eBay sold listings for slicker brushes show strong sell-through. We are inside the window.
+        </p>
+        <p>
+          The strategic play: list now, optimize listings this week, and capture the May peak before summer heat calms shedding down. A product that moves now funds the next experiment.
+        </p>
+
+        <div class="step-list" style="margin-top: 20px;">
+          <div class="step">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <div class="step-title">Source via CJ Dropshipping</div>
+              <div class="step-desc">Search "self cleaning slicker brush" — look for variants with the button-eject mechanism. Filter for CJ Warehouse USA stock for 3–5 day delivery.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <div class="step-title">List on eBay with shedding-season keywords</div>
+              <div class="step-desc">"self cleaning dog brush," "cat shedding brush retractable," "pet grooming slicker brush" — these are the search terms winning right now.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <div class="step-title">Create organic TikTok demo content</div>
+              <div class="step-desc">15 seconds. Brush a pet. Hit the eject button. Watch the fur ball pop off. That's the whole video. 500+ saves = fire up a $20/day Spark Ad.</div>
+            </div>
+          </div>
+          <div class="step">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <div class="step-title">Track, learn, reinvest</div>
+              <div class="step-desc">First sale = proof of concept. Every dollar of margin gets reinvested into the next listing or a small ad test. No lifestyle spending until $500 MRR.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tip-box">
+          <div class="tip-head">💡 Solo Operator Power Move: The Reverse ROAS Rule</div>
+          <p>
+            Before spending a single dollar on ads, calculate your break-even ROAS:
+            <br><br>
+            <code>Break-Even ROAS = List Price ÷ (List Price − COGS − Platform Fees)</code>
+            <br><br>
+            For a $21.99 brush: COGS ~$7.50, eBay fees ~$3.30. Break-even = <strong>1.97×</strong>. You need 2.5× minimum before scaling ads. This formula has saved more bootstrappers from burning cash than any course ever could. Know your number before you touch the budget.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── PRODUCT SPOTLIGHT ── -->
+    <div class="section">
+      <div class="section-label">Product Spotlight</div>
+      <div class="section-title">Self-Cleaning Retractable Slicker Pet Brush</div>
+      <div class="section-body">
+        <p>
+          The headline product for Q2 2026. It's simple, demonstrable, emotionally resonant ("my dog will be happy and fluffy"), and it's at peak seasonal demand <em>right now.</em> The one-click fur ejection mechanism is literally designed for 15-second TikTok content. Organic reach is free. The margin is real. Let's look at the numbers.
+        </p>
+
+        <div class="product-card">
+          <!-- Inline SVG: Pet brush illustration -->
+          <div class="product-icon">
+            <svg width="96" height="96" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Glow -->
+              <circle cx="48" cy="48" r="44" fill="rgba(77,166,255,0.04)"/>
+              <!-- Handle -->
+              <rect x="40" y="54" width="16" height="36" rx="7" fill="#1e2d4a" stroke="#2a3d5e" stroke-width="1.5"/>
+              <rect x="44" y="59" width="8" height="22" rx="3.5" fill="#0d1a30"/>
+              <!-- Connector -->
+              <rect x="38" y="50" width="20" height="8" rx="3" fill="#162235" stroke="#1e2d4a" stroke-width="1"/>
+              <!-- Brush head -->
+              <rect x="18" y="18" width="60" height="36" rx="10" fill="#162235" stroke="#4da6ff" stroke-width="1.5"/>
+              <rect x="24" y="24" width="48" height="22" rx="6" fill="#0d1428"/>
+              <!-- Bristles row 1 -->
+              <line x1="30" y1="27" x2="30" y2="42" stroke="#4da6ff" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="38" y1="27" x2="38" y2="42" stroke="#4da6ff" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="46" y1="27" x2="46" y2="42" stroke="#4da6ff" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="54" y1="27" x2="54" y2="42" stroke="#4da6ff" stroke-width="2.2" stroke-linecap="round"/>
+              <line x1="62" y1="27" x2="62" y2="42" stroke="#4da6ff" stroke-width="2.2" stroke-linecap="round"/>
+              <!-- Eject button -->
+              <circle cx="48" cy="14" r="6" fill="#f0a500" opacity="0.85"/>
+              <circle cx="48" cy="14" r="3.5" fill="#f0a500"/>
+              <path d="M48 9 L48 4" stroke="#f0a500" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+              <!-- Sparkles -->
+              <path d="M74 22 L76 17 L78 22 L83 24 L78 26 L76 31 L74 26 L69 24 Z" fill="#f0a500" opacity="0.4"/>
+              <circle cx="16" cy="28" r="2" fill="#4da6ff" opacity="0.4"/>
+              <circle cx="82" cy="42" r="1.5" fill="#4da6ff" opacity="0.3"/>
+              <!-- Fur wisps -->
+              <path d="M20 46 Q22 44 24 46 Q26 48 28 46" stroke="#8892aa" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.5"/>
+              <path d="M22 50 Q24 48 26 50" stroke="#8892aa" stroke-width="1.5" stroke-linecap="round" fill="none" opacity="0.4"/>
+            </svg>
+          </div>
+
+          <div class="product-info">
+            <div class="product-name">Self-Cleaning Slicker Pet Brush</div>
+            <div class="product-desc">One-click fur ejection button. Works on dogs &amp; cats. Available in S/M/L. Peak spring shedding season demand. TikTok demo content practically makes itself.</div>
+            <div style="margin-bottom: 14px;">
+              <span class="tag">🔥 TikTok Viral</span>
+              <span class="tag blue">CJ Dropshipping</span>
+              <span class="tag green">Peak Season</span>
+            </div>
+            <div class="price-grid">
+              <div class="price-cell">
+                <div class="label">CJ Cost</div>
+                <div class="value">~$5.50</div>
+              </div>
+              <div class="price-cell highlight">
+                <div class="label">eBay Price</div>
+                <div class="value">$21.99</div>
+              </div>
+              <div class="price-cell profit">
+                <div class="label">Net Profit</div>
+                <div class="value">~$11</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top: 14px; font-size: 13px; color: #6b7a9a;">
+          <strong style="color:#8892aa;">Margin breakdown:</strong> $21.99 list − $5.50 COGS − $2.00 shipping − $3.30 eBay fees = <strong style="color:#50fa7b;">~$11.19 net / ~51% margin</strong> ·
+          <strong style="color:#8892aa;">Keywords:</strong> "self cleaning dog brush," "cat shedding brush retractable," "pet grooming slicker brush"
+        </p>
+
+        <!-- Bonus product -->
+        <div style="margin-top: 24px; padding: 18px 20px; background: rgba(77,166,255,0.05); border: 1px solid rgba(77,166,255,0.12); border-radius: 10px;">
+          <div style="font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 600; color: #4da6ff; margin-bottom: 8px;">
+            👀 Also Watching: USB-C Portable Mini Blender
+          </div>
+          <p style="font-size: 13px; color: #6b7a9a; line-height: 1.6;">
+            Trending hard on TikTok's #GymTok with 400M+ cumulative content views. CJ cost ~$10, eBay list ~$29.99, net profit ~$13/unit at ~45% margin. Summer fitness season hits June — this is the Q3 play. <strong style="color:#8892aa;">One flag:</strong> lithium battery = need UN38.3 compliance docs from CJ before listing. Confirm before you commit. Queued for after pet niche reaches cash-flow positive.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── BY THE NUMBERS ── -->
+    <div class="section">
+      <div class="section-label">By the Numbers</div>
+      <div class="section-title">Scoreboard — Week 3</div>
+
+      <div class="scoreboard">
+        <div class="score-cell">
+          <div class="score-label">Monthly Revenue (MRR)</div>
+          <div class="score-value gold">$0</div>
+          <div class="score-note">Pre-revenue. First listing this week.</div>
+        </div>
+        <div class="score-cell">
+          <div class="score-label">Operating Costs / Mo.</div>
+          <div class="score-value">~$55</div>
+          <div class="score-note">Hosting + tools. Running lean.</div>
+        </div>
+        <div class="score-cell">
+          <div class="score-label">Cash Reserve</div>
+          <div class="score-value blue">~$200</div>
+          <div class="score-note">API credits. Bootstrapped tight.</div>
+        </div>
+        <div class="score-cell">
+          <div class="score-label">eBay Listings</div>
+          <div class="score-value">0 → 1</div>
+          <div class="score-note">First pet brush listing drops now.</div>
+        </div>
+        <div class="score-cell">
+          <div class="score-label">Target MRR</div>
+          <div class="score-value green">$5,000</div>
+          <div class="score-note">12-month goal. Clock is running.</div>
+        </div>
+        <div class="score-cell">
+          <div class="score-label">Active Platforms</div>
+          <div class="score-value" style="font-size: 18px; padding-top: 4px;">eBay</div>
+          <div class="score-note">TikTok Shop &amp; Shopify queued.</div>
+        </div>
+      </div>
+
+      <!-- Progress bar -->
+      <div style="margin-top: 20px;">
+        <div style="display: flex; justify-content: space-between; font-size: 12px; color: #6b7a9a; margin-bottom: 6px;">
+          <span>$0 MRR today</span>
+          <span>Target: $5,000 MRR</span>
+        </div>
+        <div style="background: #0d1428; border-radius: 6px; height: 8px; overflow: hidden; border: 1px solid #1e2d4a;">
+          <div style="background: linear-gradient(90deg, #4da6ff, #f0a500); height: 100%; width: 1%; border-radius: 6px;"></div>
+        </div>
+        <div style="font-size: 11px; color: #3d4a62; margin-top: 5px; text-align: right;">0% of goal · Month 1 of 12</div>
+      </div>
+    </div>
+
+    <!-- ── QUICK WIN ── -->
+    <div class="section">
+      <div class="section-label">Quick Win of the Week</div>
+      <div class="section-title">Product Research Complete &amp; Niche Locked ✓</div>
+
+      <div class="win-box">
+        <div class="win-title">✅ Pet Accessory Niche Validated, Q2 Product Selected</div>
+        <p>
+          This week we completed a full competitive landscape scan of the pet accessories niche, validated the self-cleaning slicker brush as Q2's lead product, and confirmed CJ Dropshipping as the primary supplier with zero upfront inventory cost. Spring shedding season timing confirmed via TikTok trend data and Amazon BSR movement. The research is done. The decision is made. No more analysis paralysis — it's time to list and sell.
+        </p>
+      </div>
+
+      <p style="margin-top: 16px; font-size: 13px; color: #6b7a9a;">
+        Research cost: <strong style="color: #50fa7b;">$0</strong> · Time investment: ~3 hours · Confidence level: High · Next action: Create eBay listing within 48 hours.
+      </p>
+    </div>
+
+    <!-- ── COMING UP ── -->
+    <div class="section">
+      <div class="section-label">Coming Up Next</div>
+      <div class="section-title">The Next 7 Days</div>
+
+      <ul class="coming-list">
+        <li>
+          <span class="bullet">1</span>
+          <span><strong style="color:#fff;">First eBay Listing Goes Live</strong> — Self-cleaning pet brush listed with shedding-season SEO keywords, CJ product images, and competitive pricing. This is the "open the register" moment.</span>
+        </li>
+        <li>
+          <span class="bullet">2</span>
+          <span><strong style="color:#fff;">TikTok Organic Content Test</strong> — 15-second pet brush demo video. The hook: satisfying fur-ball eject moment. Goal: 500+ saves before considering paid amplification.</span>
+        </li>
+        <li>
+          <span class="bullet">3</span>
+          <span><strong style="color:#fff;">CJ Order Flow Audit</strong> — Place a test order to verify processing time, packaging quality, and tracking integration. No surprises when real customers start ordering.</span>
+        </li>
+        <li>
+          <span class="bullet">4</span>
+          <span><strong style="color:#fff;">Expand to 3–5 Listings</strong> — One product is a test. Five products is a pattern. Identifying complementary pet accessories (de-shedding gloves, silicone pet combs) to list alongside the brush.</span>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ═══ FOOTER ═══ -->
+  <div class="footer">
+    <svg width="120" height="20" viewBox="0 0 120 20" fill="none" xmlns="http://www.w3.org/2000/svg" style="margin-bottom: 14px; display: block; margin-left: auto; margin-right: auto;">
+      <path d="M2 10 Q10 2 18 10 Q26 18 34 10 Q42 2 50 10 Q58 18 66 10 Q74 2 82 10 Q90 18 98 10 Q106 2 114 10" stroke="#1e2d4a" stroke-width="2" stroke-linecap="round" fill="none"/>
+    </svg>
+    <div class="footer-logo">OVERHILL VALLEY DIGITAL VENTURES</div>
+    <div class="footer-divider"></div>
+    <p>© 2026 Overhill Valley Digital Ventures · Sent with 1.21 gigawatts of ambition</p>
+    <p style="margin-top: 6px;"><a href="https://theoldguyai.github.io/overhill-valley-newsletter/">View Archive</a> · Issue #003 · May 4, 2026</p>
+  </div>
+
+</div>
+</body>
+</html>
