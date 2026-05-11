@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OVDV Weekly Dispatch — Issue #004: Two Leashes, One Listing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root { --navy:#0a0e1a; --panel:#0d1428; --panel2:#101b34; --blue:#4da6ff; --gold:#f0a500; --text:#ffffff; --muted:#9aa9c4; --line:#1d2b48; --green:#61d394; }
+    * { box-sizing:border-box; margin:0; padding:0; }
+    body { background: radial-gradient(circle at top left, rgba(77,166,255,.14), transparent 34%), var(--navy); color:var(--text); font-family:'Inter',sans-serif; line-height:1.65; padding:24px 14px; }
+    .wrap { max-width:680px; margin:0 auto; background:linear-gradient(180deg,#0b1020 0%,#080c17 100%); border:1px solid var(--line); border-radius:24px; overflow:hidden; box-shadow:0 24px 80px rgba(0,0,0,.36); }
+    .header { position:relative; text-align:center; padding:44px 34px 34px; background:linear-gradient(135deg,#0a0e1a 0%,#0d1c38 58%,#071025 100%); overflow:hidden; }
+    .header svg.bg { position:absolute; inset:0; width:100%; height:100%; opacity:.35; }
+    .brand, .meta, .hero, .section, .footer { position:relative; z-index:1; }
+    .brand { font-family:'Space Grotesk',sans-serif; font-weight:700; letter-spacing:2.5px; text-transform:uppercase; color:var(--blue); font-size:11px; margin-bottom:14px; }
+    h1 { font-family:'Space Grotesk',sans-serif; font-size:clamp(31px,7vw,48px); line-height:1.02; letter-spacing:-1px; margin:0 auto 18px; max-width:590px; }
+    h1 span, h2 span { color:var(--gold); }
+    .meta { display:inline-flex; gap:12px; flex-wrap:wrap; justify-content:center; color:#c9d7f3; font-size:13px; }
+    .pill { border:1px solid rgba(77,166,255,.35); background:rgba(77,166,255,.10); padding:7px 12px; border-radius:999px; }
+    .content { padding:0 34px 36px; }
+    .hero { margin:-2px 0 24px; padding:26px; border:1px solid rgba(240,165,0,.32); border-radius:20px; background:linear-gradient(135deg,rgba(240,165,0,.12),rgba(77,166,255,.08)); }
+    .kicker { color:var(--gold); font-family:'Space Grotesk',sans-serif; font-size:12px; font-weight:700; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px; }
+    .hero p, .section p, li { color:#dbe5f8; font-size:15px; }
+    .section { margin:22px 0; padding:24px; background:rgba(13,20,40,.78); border:1px solid var(--line); border-radius:20px; }
+    h2 { font-family:'Space Grotesk',sans-serif; font-size:23px; line-height:1.15; margin-bottom:14px; }
+    .idea-grid { display:grid; grid-template-columns:1fr 124px; gap:18px; align-items:center; }
+    .note { margin-top:14px; padding:14px 16px; border-left:3px solid var(--blue); background:rgba(77,166,255,.08); border-radius:10px; color:#cbd9f4; font-size:14px; }
+    .spotlight { display:grid; grid-template-columns:1.1fr .9fr; gap:22px; align-items:center; }
+    .product-art { background:radial-gradient(circle at 50% 32%,rgba(77,166,255,.24),transparent 55%),#091225; border:1px solid rgba(77,166,255,.24); border-radius:18px; min-height:210px; display:grid; place-items:center; padding:10px; }
+    .math { display:grid; grid-template-columns:repeat(3,1fr); gap:10px; margin-top:16px; }
+    .math div, .stat { background:#08111f; border:1px solid #203354; border-radius:14px; padding:13px; }
+    .label { display:block; color:#7f90b1; font-size:11px; text-transform:uppercase; letter-spacing:1.4px; margin-bottom:4px; }
+    .value { font-family:'Space Grotesk',sans-serif; color:#fff; font-weight:700; font-size:18px; }
+    .value.gold { color:var(--gold); } .value.blue { color:var(--blue); } .value.green { color:var(--green); }
+    .score { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; }
+    ul { margin-left:19px; } li { margin:9px 0; }
+    a { color:var(--blue); }
+    .footer { text-align:center; color:#7786a5; font-size:12px; padding:30px 24px 40px; border-top:1px solid var(--line); background:#070b14; }
+    @media (max-width:620px){ .content{padding:0 18px 26px}.header{padding:36px 18px 28px}.spotlight,.idea-grid{grid-template-columns:1fr}.score,.math{grid-template-columns:1fr 1fr}.product-art{min-height:170px} }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <header class="header">
+      <svg class="bg" viewBox="0 0 680 240" preserveAspectRatio="none" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#4da6ff"/><stop offset="1" stop-color="#f0a500"/></linearGradient></defs><circle cx="62" cy="42" r="78" fill="#4da6ff" opacity=".18"/><circle cx="606" cy="194" r="108" fill="#f0a500" opacity=".13"/><path d="M0 190 C130 100 220 220 342 140 S560 85 680 132" fill="none" stroke="url(#g)" stroke-width="2" opacity=".55"/><path d="M0 214 C145 132 230 238 366 166 S565 121 680 172" fill="none" stroke="#4da6ff" stroke-width="1" opacity=".28"/></svg>
+      <div class="brand">Overhill Valley Digital Ventures — Weekly Dispatch</div>
+      <h1>Two Leashes, <span>One Listing</span>: The Pet-Niche Groove Gets Practical</h1>
+      <div class="meta"><span class="pill">Issue #004</span><span class="pill">May 11, 2026</span><span class="pill">Building from $0 MRR</span></div>
+    </header>
+
+    <div class="content">
+      <section class="hero">
+        <div class="kicker">Hero riff</div>
+        <p>This week’s melody is simple: stop chasing every shiny product and build one tight, testable pet listing around a real owner problem. The winning pattern from current dropship research is still utility + impulse: products that solve a daily annoyance, photograph well, and can be explained in a 12-second TikTok-style demo.</p>
+      </section>
+
+      <section class="section">
+        <div class="idea-grid">
+          <div>
+            <div class="kicker">This Week’s Big Idea</div>
+            <h2>Build the <span>proof-first</span> listing before building the store.</h2>
+            <p>Zendrop’s 2026 pet roundup highlights practical dog/cat accessories — including LED double leashes, snuffle mats, paw cleaners, cat fountains, and pet hair removers — because they show the benefit instantly. CJ’s 2026 market note also points to social commerce as a serious channel, with TikTok Shop forecast to keep growing as impulse buying moves in-app.</p>
+            <p class="note"><strong>Actionable takeaway:</strong> for eBay, write the listing like a mini demo script: problem → visual solution → trust cue → exact shipping expectation. Then reuse that script as the first TikTok/Reel when we test social traffic later.</p>
+          </div>
+          <svg viewBox="0 0 140 140" role="img" aria-label="Blueprint icon"><rect x="16" y="18" width="108" height="104" rx="16" fill="#0a1628" stroke="#4da6ff"/><path d="M36 48h66M36 70h44M36 92h56" stroke="#f0a500" stroke-width="7" stroke-linecap="round"/><circle cx="102" cy="92" r="14" fill="#4da6ff" opacity=".85"/></svg>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="kicker">Product Spotlight</div>
+        <h2>No-Tangle Double Dog Walking Leash <span>with LED Lights</span></h2>
+        <div class="spotlight">
+          <div>
+            <p><strong>Why it’s interesting:</strong> It solves a visible headache for two-dog households: crossed leads, evening visibility, and the “walk both dogs with one hand” problem. It is demo-friendly, giftable, and aligned with the pet-accessory trend lists showing utility-first products outperforming generic toys.</p>
+            <div class="math">
+              <div><span class="label">Target supplier cost</span><span class="value blue">$9.80</span></div>
+              <div><span class="label">eBay list price</span><span class="value gold">$24.95</span></div>
+              <div><span class="label">Gross margin</span><span class="value green">$15.15</span></div>
+            </div>
+            <p class="note">Margin before eBay fees, payment processing, returns, and shipping variance. No paid ads recommended yet — keep the test bootstrap-clean.</p>
+          </div>
+          <div class="product-art">
+            <svg viewBox="0 0 260 210" aria-label="Inline SVG illustration of double dog leash with lights">
+              <defs><filter id="glow"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+              <path d="M130 42 C126 82 92 92 72 124" fill="none" stroke="#f0a500" stroke-width="9" stroke-linecap="round"/>
+              <path d="M130 42 C136 82 172 94 192 126" fill="none" stroke="#f0a500" stroke-width="9" stroke-linecap="round"/>
+              <rect x="104" y="18" width="52" height="34" rx="14" fill="#111c34" stroke="#4da6ff" stroke-width="3"/>
+              <circle cx="116" cy="35" r="5" fill="#4da6ff" filter="url(#glow)"/><circle cx="144" cy="35" r="5" fill="#4da6ff" filter="url(#glow)"/>
+              <circle cx="69" cy="128" r="13" fill="#4da6ff" filter="url(#glow)"/><circle cx="195" cy="128" r="13" fill="#4da6ff" filter="url(#glow)"/>
+              <path d="M54 151c8-14 25-14 36 0v26H54z" fill="#1c2b4a" stroke="#8abfff"/><circle cx="64" cy="145" r="10" fill="#1c2b4a" stroke="#8abfff"/><path d="M176 151c8-14 25-14 36 0v26h-36z" fill="#1c2b4a" stroke="#8abfff"/><circle cx="186" cy="145" r="10" fill="#1c2b4a" stroke="#8abfff"/>
+              <path d="M43 174h56M166 174h56" stroke="#4da6ff" stroke-width="4" stroke-linecap="round" opacity=".55"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="kicker">By The Numbers</div>
+        <h2>The bootstrap scoreboard</h2>
+        <div class="score">
+          <div class="stat"><span class="label">MRR</span><span class="value">$0</span></div>
+          <div class="stat"><span class="label">Operating cost</span><span class="value">~$55/mo</span></div>
+          <div class="stat"><span class="label">Cash reserve</span><span class="value">~$200 credits</span></div>
+          <div class="stat"><span class="label">Listings</span><span class="value gold">1 focus SKU</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="kicker">Quick Win of the Week</div>
+        <h2>Picked a listing angle instead of another platform rabbit hole.</h2>
+        <p>The quick win: define the first test around a specific buyer — the two-dog owner walking at dusk — and a specific promise: less tangling, better visibility, one-handed control. That gives the listing headline, image checklist, and short-form video hook a shared beat.</p>
+      </section>
+
+      <section class="section">
+        <div class="kicker">Coming Up Next</div>
+        <h2>Next moves on the turntable</h2>
+        <ul>
+          <li>Draft the eBay title with high-intent keywords: “double dog leash,” “no tangle,” “LED,” “reflective,” and “two dogs.”</li>
+          <li>Compare supplier variants for shipping time, battery details, leash length, and review-photo quality.</li>
+          <li>Create a 3-image listing set: problem shot, feature callout, size/spec panel.</li>
+          <li>Keep TikTok Shop on deck, but only after the eBay listing has clean proof and a repeatable demo script.</li>
+        </ul>
+      </section>
+    </div>
+
+    <footer class="footer">© 2026 Overhill Valley Digital Ventures · Sent with 1.21 gigawatts of ambition</footer>
+  </main>
+</body>
+</html>
