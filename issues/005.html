@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OVDV Weekly Dispatch — Issue #005</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  body { margin:0; background:#0a0e1a; color:#f7fbff; font-family:'Inter',Arial,sans-serif; }
+  .page { width:100%; padding:28px 14px 44px; }
+  .shell { max-width:680px; margin:0 auto; background:linear-gradient(180deg,#0d1428 0%,#0a0e1a 100%); border:1px solid #1a2b4d; border-radius:26px; overflow:hidden; box-shadow:0 28px 90px rgba(0,0,0,.45); }
+  .topbar { padding:24px 28px 10px; border-bottom:1px solid rgba(77,166,255,.14); }
+  .brand { color:#4da6ff; text-transform:uppercase; letter-spacing:2.1px; font-size:11px; font-weight:800; }
+  h1,h2,h3 { font-family:'Space Grotesk',Arial,sans-serif; margin:0; }
+  .issue-meta { margin-top:8px; color:#9fb3d1; font-size:13px; }
+  .hero { padding:34px 28px 24px; position:relative; overflow:hidden; }
+  .hero-grid { display:grid; grid-template-columns:1.25fr .75fr; gap:18px; align-items:center; }
+  .eyebrow { display:inline-block; color:#0a0e1a; background:#f0a500; padding:6px 10px; border-radius:999px; font-weight:800; font-size:11px; letter-spacing:.7px; margin-bottom:14px; }
+  h1 { font-size:38px; line-height:1.02; color:#fff; letter-spacing:-1.3px; }
+  .hero p { color:#c8d7ef; line-height:1.65; font-size:15px; margin:16px 0 0; }
+  .card { margin:18px 28px; padding:24px; background:#0f1830; border:1px solid #203a66; border-radius:20px; }
+  .card h2 { color:#4da6ff; font-size:22px; margin-bottom:10px; }
+  .card p, .card li { color:#d7e2f5; line-height:1.7; font-size:15px; }
+  .gold { color:#f0a500; font-weight:800; }
+  .spot { display:grid; grid-template-columns:160px 1fr; gap:20px; align-items:center; }
+  .metric-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:10px; margin-top:14px; }
+  .metric { background:#0a1020; border:1px solid #1b3158; border-radius:14px; padding:14px 10px; }
+  .metric b { display:block; color:#f0a500; font-size:19px; font-family:'Space Grotesk'; }
+  .metric span { display:block; color:#93a8c8; font-size:11px; margin-top:4px; }
+  .price-table { width:100%; border-collapse:collapse; margin-top:12px; font-size:14px; }
+  .price-table td { padding:9px 0; border-bottom:1px solid rgba(255,255,255,.08); color:#d7e2f5; }
+  .price-table td:last-child { text-align:right; color:#fff; font-weight:800; }
+  .note { margin-top:12px; padding:12px 14px; border-left:3px solid #f0a500; background:rgba(240,165,0,.08); color:#ffe5a8!important; }
+  ul { margin:10px 0 0 20px; padding:0; }
+  .footer { padding:26px 28px 34px; text-align:center; color:#6f83a6; font-size:12px; }
+  .sources { color:#7f93b5; font-size:12px!important; }
+  @media(max-width:620px) { .hero-grid,.spot { grid-template-columns:1fr; } h1 { font-size:31px; } .metric-grid { grid-template-columns:repeat(2,1fr); } .card,.hero,.topbar { margin-left:0; margin-right:0; } .shell { border-radius:18px; } }
+</style>
+</head>
+<body>
+<div class="page"><main class="shell">
+  <header class="topbar">
+    <div class="brand">Overhill Valley Digital Ventures — Weekly Dispatch</div>
+    <div class="issue-meta">Issue #005 · Week of May 18, 2026 · Built in public by one human, a tiny budget, and suspiciously caffeinated robots</div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-grid">
+      <div>
+        <span class="eyebrow">THIS WEEK'S THEME</span>
+        <h1>Quiet Water, Loud Margins: The Cat Fountain Test Gets Its Solo</h1>
+        <p>The pet-accessory lane still has rhythm: small, visual products that solve a real owner annoyance, can be explained in a 7-second clip, and don’t require us to light cash on fire. This week, the band tunes up around hydration.</p>
+      </div>
+      <svg viewBox="0 0 220 220" role="img" aria-label="Glowing cat fountain illustration">
+        <defs><radialGradient id="g" cx="50%" cy="45%" r="65%"><stop offset="0" stop-color="#4da6ff" stop-opacity=".45"/><stop offset="1" stop-color="#0a0e1a" stop-opacity="0"/></radialGradient></defs>
+        <circle cx="110" cy="110" r="100" fill="url(#g)"/>
+        <path d="M72 85 C84 58 137 58 150 86 L159 151 C161 166 149 178 133 178 H88 C72 178 60 166 63 150 Z" fill="#101d38" stroke="#4da6ff" stroke-width="4"/>
+        <path d="M86 76 L76 48 L102 66" fill="#101d38" stroke="#4da6ff" stroke-width="4" stroke-linejoin="round"/>
+        <path d="M135 66 L161 48 L151 78" fill="#101d38" stroke="#4da6ff" stroke-width="4" stroke-linejoin="round"/>
+        <circle cx="94" cy="104" r="6" fill="#f0a500"/><circle cx="128" cy="104" r="6" fill="#f0a500"/>
+        <path d="M111 116 q-9 10-20 0 M111 116 q9 10 20 0" fill="none" stroke="#d7e2f5" stroke-width="3" stroke-linecap="round"/>
+        <path d="M110 34 C88 58 132 62 110 91 C140 67 119 52 110 34Z" fill="#4da6ff" opacity=".95"/>
+        <ellipse cx="111" cy="153" rx="43" ry="13" fill="#4da6ff" opacity=".25"/>
+      </svg>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>1. This Week's Big Idea</h2>
+    <p><span class="gold">Bootstrap filter:</span> pick products that are instantly demonstrable. Research this week pointed again to pet problem-solvers — cat water fountains, dog cooling mats, lick mats, paw cleaners, and slow feeders — because they’re visual, specific, and easy to turn into eBay titles plus short-form creative later.</p>
+    <p>For OVDV, the move is not “build a pet empire overnight.” It’s tighter: publish a small set of listings, measure views/watchers, then only double down where the market taps its foot.</p>
+    <p class="sources">Research notes: DuckDuckGo results surfaced Zendrop’s 2026 trending pet-product list and Dropified’s 2026 pet dropshipping breakdown, which specifically called out cat water fountains, lick mats, paw cleaners, cooling mats, and slow feeders. CJ live lookup returned a stainless cat water dispenser at $14.59–$15.92.</p>
+  </section>
+
+  <section class="card">
+    <h2>2. Product Spotlight</h2>
+    <div class="spot">
+      <svg viewBox="0 0 180 180" role="img" aria-label="Stainless steel pet water fountain">
+        <rect x="17" y="17" width="146" height="146" rx="28" fill="#0a1020" stroke="#203a66"/>
+        <ellipse cx="90" cy="124" rx="55" ry="19" fill="#162847" stroke="#4da6ff" stroke-width="3"/>
+        <rect x="57" y="79" width="66" height="48" rx="15" fill="#d9e8ff" opacity=".18" stroke="#d7e2f5"/>
+        <path d="M89 36 C72 57 105 61 91 83 C119 63 100 50 89 36Z" fill="#4da6ff"/>
+        <path d="M89 80 C76 98 104 100 91 119" fill="none" stroke="#4da6ff" stroke-width="5" stroke-linecap="round"/>
+        <circle cx="132" cy="52" r="10" fill="#f0a500"/><path d="M38 54 h31" stroke="#f0a500" stroke-width="5" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h3>Large-Capacity Stainless Steel Cat Water Dispenser</h3>
+        <p>Why it sings: hydration is a recurring cat-owner pain point, stainless steel has a premium angle, and the product photographs cleanly for marketplace cards.</p>
+        <table class="price-table">
+          <tr><td>Supplier cost</td><td>$14.59–$15.92</td></tr>
+          <tr><td>Target list price</td><td>$29.99</td></tr>
+          <tr><td>Gross spread</td><td>$14.07 gross before marketplace fees</td></tr>
+          <tr><td>Bootstrap spend flag</td><td>Test listing only — no paid ads</td></tr>
+        </table>
+        <p class="note">Marvin’s note: don’t chase a $60+ gadget yet. This one keeps the experiment under the “no scary spend” line and gives us clean demand data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>3. By The Numbers</h2>
+    <div class="metric-grid">
+      <div class="metric"><b>$0</b><span>Current MRR</span></div>
+      <div class="metric"><b>~$55</b><span>Monthly operating cost</span></div>
+      <div class="metric"><b>~$200</b><span>API-credit cash reserve</span></div>
+      <div class="metric"><b>26</b><span>eBay listings tracked as listed</span></div>
+    </div>
+    <p class="note">Scoreboard stays honest: the mission remains $5,000/month within 12 months, and every listing has to earn its place in the setlist.</p>
+  </section>
+
+  <section class="card">
+    <h2>4. Quick Win of the Week</h2>
+    <p>Completed the next issue build using live repo state instead of the missing temporary counter, preventing an accidental duplicate issue number. That’s not glamorous, but it’s the kind of backstage cable-taping that keeps the show from tripping over itself.</p>
+  </section>
+
+  <section class="card">
+    <h2>5. Coming Up Next</h2>
+    <ul>
+      <li>Create/test an eBay listing draft for the stainless cat fountain with fee-aware pricing.</li>
+      <li>Compare one alternate pet accessory: lick mat or slow feeder, keeping supplier cost below $20.</li>
+      <li>Watch listing impressions and watchers before adding any spend.</li>
+      <li>Prep a Beehiiv-friendly version of this dispatch and a short “build-in-public” social post.</li>
+    </ul>
+  </section>
+
+  <footer class="footer">© 2026 Overhill Valley Digital Ventures · Sent with 1.21 gigawatts of ambition</footer>
+</main></div>
+</body>
+</html>
